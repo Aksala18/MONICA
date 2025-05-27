@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personagem com Popups</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <img id="player" src="images/avatar-monica.png" alt="Personagem" />
+        <img class="object" id="duck" src="images/duck.png" alt="duck" style="left: 710px; top: 65px;" data-message="Minha avó favorita, patoda vida!" />
+      
+        <!-- Objetos -->
+        <img class="object" id="duck1" src="images/duck.png" data-message="She came, she saw, she quacked." alt="duck" style="left: 460px; top: 165px;" />
+        <img class="object" id="duck2" src="images/duck.png" data-message="Don’t duck with grandma." alt="duck" style="left: 40px; top: 512px;" />
+      
+        <!-- Barreiras -->
+        <!-- Limites do container -->
+        <div class="barrier h" style="top: 0; left: 0; width: 800px;"></div>
+        <div class="barrier h" style="bottom: 0; left: 0; width: 800px;"></div>
+        <div class="barrier v" style="top: 0; left: 0; height: 600px;"></div>
+        <div class="barrier v" style="top: 0; right: 0; height: 600px;"></div>
+      
+        <!-- Paredes interiores -->
+        <div class="barrier v" style="top: 120px; left: 120px; height: 200px;"></div>
+        <div class="barrier v" style="top: 22px; left: 220px; height: 200px;"></div>
+        <div class="barrier v" style="top: 120px; left: 520px; height: 120px;"></div>
+        <div class="barrier v" style="top: 22px; left: 660px; height: 480px;"></div>
+        <div class="barrier v" style="top: 320px; left: 560px; height: 255px;"></div>
+        <div class="barrier v" style="top: 420px; left: 220px; height: 155px;"></div>
+        <div class="barrier v" style="top: 340px; left: 340px; height: 160px;"></div>
+        <div class="barrier v" style="top: 420px; left: 460px; height: 155px;"></div>
+
+        <div class="barrier h" style="top: 320px; left: 120px; width: 240px;"></div>
+        <div class="barrier h" style="top: 220px; left: 220px; width: 298px;"></div>
+        <div class="barrier h" style="top: 460px; left: 22px; width: 120px;"></div>
+        <div class="barrier h" style="top: 120px; left: 318px; width: 200px;"></div>
+        <div class="barrier h" style="top: 320px; left: 458px; width: 100px;"></div>
+      </div>
+      
+      
+
+  <div id="popup" class="hidden">
+    <p id="popup-message"></p>
+    <button onclick="closePopup()">Fechar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

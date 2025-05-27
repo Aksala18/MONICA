@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    font-family: 'Press Start 2P', monospace;
+    color: #c800ff;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    background: linear-gradient(#111, #1a1a1a);
+    border: 2px solid #c800ff;
+    overflow: hidden;
+    border-radius: 10px;
+    image-rendering: pixelated; /* mantém pixel art nítido */
+  }
+  
+  #player, .object {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    image-rendering: pixelated;
+  }
+
+  .object {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #player {
+    width: 40px;
+    height: 60px;
+    left: 50px;
+    top: 50px;
+    transition: 0.1s;
+  }
+  
+  #duck1 {
+    left: 300px;
+    top: 200px;
+  }
+
+  #duck2 {
+    left: 600px;
+    top: 400px;
+  }
+  
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    color: #c800ff;
+    padding: 20px 30px;
+    border: 3px double #c800ff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 999;
+    box-shadow: 0 0 15px #c800ff;
+    max-width: 80vw;
+  }
+  
+  #popup.hidden {
+    display: none;
+  }
+  
+  #popup button {
+    margin-top: 15px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    padding: 8px 16px;
+    background: black;
+    color: #c800ff;
+    border: 2px solid #c800ff;
+    cursor: pointer;
+  }
+  
+  #popup button:hover {
+    background: #c800ff;
+    color: black;
+  }
+
+  
+  .barrier, #game-container {
+    animation: pulseGlow 1.5s infinite;
+  }
+  
+  .barrier {
+    position: absolute;
+    background-color: #111;
+    border: 2px solid #c800ff;
+    box-shadow:
+      0 0 5px #c800ff,
+      inset 0 0 5px #c800ff;
+    z-index: 2;
+  }
+  
+  
+  /* Paredes horizontais (largura maior que altura) */
+  .barrier.h {
+    height: 20px;
+    z-index: 1;
+  }
+  
+  /* Paredes verticais (altura maior que largura) */
+  .barrier.v {
+    width: 20px;
+    z-index: 1;
+  }
+  
